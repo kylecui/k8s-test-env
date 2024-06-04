@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-meta-name
+  # 指定 label，便于检索
+  labels:
+    app: nginx-meta-label
+spec:
+  containers:
+  - name: nginx-container-name
+    # 指定镜像
+    image: nginx:alpine
+    # 指定暴露端口
+    ports:
+    - containerPort: 80
+
